@@ -10,10 +10,10 @@ def hello():
     redis.incr('hits')
     return 'This Compose/Flask demo has been viewed {} time(s). Created by Christian Ramirez'.format(redis.get('hits'))
 
-@app.route('/app')
+@app.route('/test')
 def test():
     redis.incr('hits')
-    return 'This Compose/Flask demo has been viewed {} time(s). Created by Christian Ramirez'.format(redis.get('hits'))
+    return 'This is the path "/test" and it has been viewed {} time(s). Created by Christian Ramirez'.format(redis.get('hits'))
 
 
 if __name__ == "__main__":
